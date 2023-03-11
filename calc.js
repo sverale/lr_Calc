@@ -5,23 +5,23 @@ cal.addEventListener('click', function(event) {
   if(!event.target.classList.contains('cal_btn')) return;
 
   const value = event.target.innerText;
-  var x
-
 
   switch(value) {
     case 'C':
       result.innerText = '';
       break;
 //
-      case 'pi':
-      result.innerText ='3.14';
+    case 'pi':
+      result.innerText = result.innerText + '3.14';
       break;
 
-
-
-
-      case '!':
+    case '!':
       result.innerText = factorial();
+      break;
+
+    case 'sqrt':
+      // result.innerText = factorial();
+      result.innerText = Math.sqrt(result.innerText)
       break;
 ///
     case '=':
@@ -35,7 +35,7 @@ cal.addEventListener('click', function(event) {
 
   }
 // 5! = 1 * 2 *3 * 4 * 5
-  /// написать класс меф и  функции сделать методавми этого класса
+  /// написать класс мез и  функции сделать методавми этого класса
 function factorial() {
     let factorial =  document.getElementById("result").value
     console.log("hererrerererer")
@@ -49,33 +49,33 @@ function factorial() {
     // result.innerText += value;
  }
 
+////////////////////////////////////////////////
+// class Math {
+//   // методы класса
+//   constructor() { ... }
 
-    // function factorial(n) {
-    //     return (n != 1) ? n * factorial(n - 1) : 1;
-    //   }
+//   factorial() { ... }
+//   degree() { ... }
+//   sqrt () { ... }
+//   ...
+// }
+///////////////////////////////////////////
+// class User {
 
-     
+//   constructor(name) {
+//     this.name = name;
+//   }
 
+//   sayHi() {
+//     alert(this.name);
+//   }
 
-
-// function stepen (value) {
-//     x = event.target.innerText;
-//     n = event.target.innerText;
-//     rezult.value=x.value**n.value;
-
-
-//     result.innerText += value;
 // }
 
-
-  
-// //
-// 
-
-
-//
-
-
+// // Использование:
+// let user = new User("Иван");
+// user.sayHi();
+////////////////////////////////////////////////
 
 });
 
